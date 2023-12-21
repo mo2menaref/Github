@@ -3,15 +3,15 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Frame extends JFrame implements ActionListener {
+    JPanel p1, p2, p3, p4, p5, p6, p7;
+    JLabel l1, l2, l3, l4, l5,l6;
+    TextField s1,s2,s3;
     JButton b1;
-    JLabel l1;JLabel l2;JLabel l3;JLabel l4;JLabel l5;JLabel l6;
-    TextField s1;TextField s2;TextField s3;
     JComboBox c1;
-    JPanel p1;JPanel p2;JPanel p3;JPanel p4;JPanel p5;JPanel p6;JPanel p7;
     Circle cir1=new Circle();
     Square squ1=new Square();
     Rectangle rec1 =new Rectangle();   
-
+////////////////////////////////////////////////////////////
     public Frame(){
         setTitle("Geometric Calculator");
         setSize(700,400);
@@ -22,7 +22,7 @@ public class Frame extends JFrame implements ActionListener {
         setLayout(null);
 
         String Geo[]={"Choose The Geometric....","Rectangle","Square","Circle"};
-        c1=new JComboBox(Geo);    
+        c1=new JComboBox<>(Geo);    
         c1.setEditable(false);
         //////////////////////////////////////////////////
 
@@ -35,9 +35,9 @@ public class Frame extends JFrame implements ActionListener {
          l5 =new JLabel("The Area is:-");
          l6 =new JLabel("The Perimeter is:-");
          
-         s1=new TextField(1);
-         s2=new TextField(1);
-         s3=new TextField(1);
+         s1=new TextField(2);
+         s2=new TextField(2);
+         s3=new TextField(2);
 
          p1=new JPanel();
          p2=new JPanel();
@@ -84,12 +84,12 @@ public class Frame extends JFrame implements ActionListener {
         s2.setBounds(20,215,200,25);
         s3.setBounds(20,295,200,25);
         
-        c1.setBounds(20,40,200,40);
+        c1.setBounds(20,50,200,40);
 
         p1.setBounds(20,20,100,25);
-        p2.setBounds(20,100,100,25);
-        p3.setBounds(20,180,100,25);
-        p4.setBounds(20,260,100,25);
+        p2.setBounds(20,100,75,25);
+        p3.setBounds(20,180,75,25);
+        p4.setBounds(20,260,75,25);
         p5.setBounds(420,100,250,25);
         p6.setBounds(420,180,250,25);
         p7.setBounds(0,0,700,400);
@@ -103,7 +103,6 @@ public class Frame extends JFrame implements ActionListener {
         p6.setBackground(Color.red);
         p7.setBackground(Color.black);
 
-        add(p1);
         add(p1);
         add(p2);
         add(p3);
@@ -160,17 +159,18 @@ if(c1.getItemAt(c1.getSelectedIndex())=="Rectangle"){
 }
 //////////////////////////////////////////////////
 if(c1.getItemAt(c1.getSelectedIndex())=="Square"){
-    String ob4,ob5;
-    ob4=s1.getText();
-    ob5=s2.getText();
+    String ob2,ob3;
+    ob2=s1.getText();
+    ob3=s2.getText();
 
-    double res1 =Double.parseDouble(ob4);
-    double res2 =Double.parseDouble(ob5);
+    double res1 =Double.parseDouble(ob2);
+    double res2 =Double.parseDouble(ob3);
 
     squ1.setheight(res1);
     squ1.setwidth(res2);
-    squ1.getheight();
-    squ1.getwidth();
+    // squ1.getheight();
+    // squ1.getwidth();
+
     if(squ1.getheight()==squ1.getwidth()){
         if(a.getSource()==b1){
             
@@ -178,7 +178,7 @@ if(c1.getItemAt(c1.getSelectedIndex())=="Square"){
             l6.setText("The Perimeter is: " + squ1.getpre());
         }
     }
-    else{
+        else{
         if(a.getSource()==b1){
             l5.setText("Not Square");
             l6.setText("Not Square");
