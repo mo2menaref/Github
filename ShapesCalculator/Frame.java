@@ -1,7 +1,7 @@
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
-
+//Body of the Program
 public class Frame extends JFrame implements ActionListener {
     JPanel p1, p2, p3, p4, p5, p6, p7;
     JLabel l1, l2, l3, l4, l5,l6;
