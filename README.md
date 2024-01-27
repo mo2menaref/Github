@@ -1,4 +1,3 @@
-# Github
-## hello
-**hi**
-First Github project (test project)
+# Hello
+## Java Projects Here!!
+My First Github project
