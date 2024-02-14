@@ -1,0 +1,4 @@
+This is a simple program for Login_System embodies the idea of sign up and login systems by storing data in HashMap but on the memory(while the program is runing) ,it doesn't contain database.
+AppFrame class is the class which contain project structure
+You first add accounts from signup button ,every time you confirm the process it will takes you automatically in the first page and then you can try your usernames and passwords in login.
+If you want to add some default accounts you can add it in data constructer by "login.put(username,password);".
